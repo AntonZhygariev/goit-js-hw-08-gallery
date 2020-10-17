@@ -1,6 +1,5 @@
 import imageRef from "./gallery-items.js";
 
-//console.log(imageRef);
 
 const galleryContainer = document.querySelector('.js-gallery');
 const cardsMarkup = createImageCardsMarkup(imageRef);
@@ -50,18 +49,12 @@ function onGalleryContainerClick(evt) {
 
   onOpenModalClick()
   onAddModalImage(evt)
-
-  // const swatchEl = evt.target;
-  // const parentImageCard = swatchEl.closest('gallery__item');
-  //removeActiveCardClass();
-  //addActiveCardClass(parentImageCard);
-  //setBodyBgColor(swatchEl.dataset.source);
 }
 
 function onOpenModalClick() {
   containerModalOpen.classList.add('is-open');
   window.addEventListener('keydown', onEscKeyPress);
-  // document.body.classList.add('show-modal');
+
 }
 
 function onAddModalImage(evt) {
@@ -70,7 +63,6 @@ function onAddModalImage(evt) {
 }
 
 function onCloseModal(evt) {
-  //galleryContainer.removeEventListener('click', onGalleryContainerClick);
   containerModalOpen.classList.remove('is-open');
   window.removeEventListener('keydown', onEscKeyPress);
   modalOpenImage.src = '';
@@ -93,19 +85,3 @@ function onEscKeyPress(evt) {
     onCloseModal();
   }
 }
-
-// function setBodyBgColor(source) {
-//   document.body.style.backgroundColor = source;
-// }
-
-// function removeActiveCardClass() {
-//   const currentActiveCard = document.querySelector('.gallery__item.is-active');
-
-//   if (currentActiveCard) {
-//     currentActiveCard.classList.remove('is-active');
-//   }
-// }
-
-// function addActiveCardClass(card) {
-//   card.classList.add('is-active');
-// }
