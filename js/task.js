@@ -44,8 +44,6 @@ function onGalleryContainerClick(evt) {
   if (!isImageSwatchEl) {
     return;
   }
-  console.log('target', evt.target)
-  console.log('currentTarget', evt.currentTarget)
 
   onOpenModalClick()
   onAddModalImage(evt)
@@ -72,7 +70,6 @@ function onCloseModal(evt) {
 
 function onBackdropClick(evt) {
   if (evt.target === containerModalClose) {
-    console.log('Кликнули именно в бекдроп!!!!');
     onCloseModal();
   }
 }
